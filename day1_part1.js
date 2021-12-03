@@ -7,10 +7,10 @@ let count = 0
 let total = 0
 
 const all = fs.readFileSync('input_day1', 'utf-8')
-all.split(/\r?\n/).forEach(measurement =>  {
+all.split(/\r?\n/).map(x => parseInt(x, 10)).forEach(measurement =>  {
     total++
     if(previous !== undefined) {
-        measurement = parseInt(measurement, 10)
+        // measurement = parseInt(measurement, 10)
         if(measurement > previous) {
             count++
         }
