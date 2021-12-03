@@ -11,9 +11,7 @@ let ones = new Array(numBits).fill(0)
 let gamma = 0
 let epsilon = 0
 
-measurements.map(x => parseInt(x, 10)).forEach(consumption =>  {
-    consumption = parseInt(consumption, 2)
-
+measurements.map(x => parseInt(x, 2)).forEach(consumption => {
     for(let bit = 0; bit < numBits; bit++) {
         (consumption & Math.pow(2,bit)) >> bit ? ones[bit]++ : zeros[bit]++
     }
